@@ -10,20 +10,14 @@
 <head>
   <title>Calculate sum of ArrayList values</title>
   <script>
-      function validateForm(){
-          var val1 = document.forms["myForm"]["value1"].value;
-          if(val1 == ""){
-              alert("Value 1 is required!");
-              document.forms["myForm"]["value1"].focus();
-              return false;
-          }
-
-      }
 
       function ConvertToKm(val) {
           if(val!="") {
               var convertedValue = Convert(val, "toKm");
               document.forms["myForm"]["kilometerInput"].value = convertedValue;
+          }
+          else{
+              document.forms["myForm"]["kilometerInput"].value = "";
           }
       }
 
@@ -32,6 +26,8 @@
           if(val!=""){
               var convertedValue = Convert(val, "toMile");
               document.forms["myForm"]["mileInput"].value = convertedValue;
+          }else{
+              document.forms["myForm"]["mileInput"].value = "";
           }
       }
 
@@ -45,6 +41,7 @@
           } else {
               convertedValue = value / 0.621371;
           }
+          convertedValue = convertedValue.toFixed(5);
           return convertedValue;
       }
   </script>
