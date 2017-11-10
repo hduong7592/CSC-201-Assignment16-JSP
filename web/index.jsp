@@ -11,6 +11,11 @@
   <title>Calculate sum of ArrayList values</title>
   <script>
 
+      /**
+       * function to convert from mile to kilometer
+       * @param val
+       * @constructor
+       */
       function ConvertToKm(val) {
           if(val!="") {
               var convertedValue = Convert(val, "toKm");
@@ -21,6 +26,11 @@
           }
       }
 
+      /**
+       * function to convert from kilometer to mile
+       * @param val
+       * @constructor
+       */
       function ConvertToMile(val) {
 
           if(val!=""){
@@ -41,6 +51,7 @@
           } else {
               convertedValue = value / 0.621371;
           }
+          //Display decimal in 5 places
           convertedValue = convertedValue.toFixed(5);
           return convertedValue;
       }
